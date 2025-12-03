@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Lou Cesar| Professional Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-blue': '#1D4ED8',
+                        'secondary-gray': '#E5E7EB', 
+                        'dark-bg': '#1F2937', 
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-header {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 75%;
+            height: 4px;
+            background-color: theme('colors.primary-blue');
+            border-radius: 9999px;
+        }
+
+        
+        #hero-section {
+            background-image: url('https://placehold.co/1920x600/1D4ED8/ffffff?text=Professional+Background+Image');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-primary-blue hover:text-blue-700 transition duration-300">Christian Lou S. Cesar</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-primary-blue transition duration-300">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-primary-blue transition duration-300">Skills</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-primary-blue transition duration-300">Portfolio</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary-blue transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary-blue focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-secondary-gray transition duration-300 border-t border-gray-100">About</a>
+            <a href="#skills" class="block py-2 px-4 text-sm text-gray-700 hover:bg-secondary-gray transition duration-300 border-t border-gray-100">Skills</a>
+            <a href="#portfolio" class="block py-2 px-4 text-sm text-gray-700 hover:bg-secondary-gray transition duration-300 border-t border-gray-100">Portfolio</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-secondary-gray transition duration-300 border-t border-gray-100">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="h-screen flex items-center justify-center text-center bg-gray-100" style="min-height: 500px;">
+            <div id="hero-section" class="w-full h-full flex items-center justify-center p-8">
+                <div class="bg-white bg-opacity-90 p-8 md:p-12 rounded-xl shadow-2xl max-w-2xl">
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-primary-blue mb-4 leading-tight">
+                        Hi, I'm Christian Lou S. Cesar
+                    </h1>   
+                    <p class="text-xl sm:text-2xl text-gray-700 mb-6 font-light">
+                        A <span class="font-semibold text-primary-blue">Web designer</span> and <span class="font-semibold text-primary-blue">Has knowledge of basic programming</span>passionate about creating a design and user-focused web experiences.
+                    </p>
+                    <a href="#portfolio" class="inline-block px-8 py-3 bg-primary-blue text-white font-semibold text-lg rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg transform hover:scale-105">
+                        View 
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <h2 class="section-header text-3xl font-bold mb-10 text-gray-900">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+                    <!-- Profile Picture Placeholder -->
+                    <div class="flex-shrink-0">
+                        <img src="shan.jpg" alt="Jane Doe Profile" class="w-44 h-44 rounded-full object-cover border-4 border-primary-blue shadow-lg">
+                    </div>
+                    <div class="text-lg text-gray-600 leading-relaxed">
+                        <p class="mb-4">
+                           I'm Christian lou Cesar, live in gingoog city misamis oriental, Barangay 26 purok-7 Saa Velligas ST. I'm 22 years old.
+                        </p>
+                        <p>
+                        I’m a Bachelor of Science in Information Technology student who loves building a web design. My interests include web development, frontend design, and system analysis.
+                        </p>
+                        <p>
+                            I’ve complete some academic projects. I enjoy experimenting with new technologies—whether it’s improving user interfaces with React and Tailwind.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 md:py-24 bg-secondary-gray">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+                <h2 class="section-header text-3xl font-bold mb-12 text-gray-900">Skills</h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Skill Card 1: Frontend -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-blue">Frontend</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm list-none p-0">
+                            <li>React, Next.js</li>
+                            <li>HTML, CSS, Tailwind CSS</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 2: Backend -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-blue">documentation</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm list-none p-0">
+                            <li>Microsoft word</li>
+                            <li>Canva</li>
+                            <li>Docs</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 3: Database -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-blue">ui/Graphic design</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm list-none p-0">
+                            <li>Figma</li>
+                            <li>Vs code</li>
+                            <li>Canva</li>
+                            <li>Microsoft word</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Card 4: Tools & DevOps -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border-t-4 border-primary-blue">
+                        <h3 class="text-xl font-semibold mb-3 text-primary-blue">basic code</h3>
+                        <ul class="text-gray-700 space-y-1 text-sm list-none p-0">
+                            <li>Html</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section (Projects) -->
+        <section id="portfolio" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                <h2 class="section-header text-3xl font-bold mb-12 text-gray-900">Projects</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                    <!-- Project Card 1 -->
+                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-primary-blue/30 transition duration-300 border border-gray-100">
+                        <img src="https://placehold.co/600x400/10B981/ffffff?text=E-commerce+Platform" alt="Project 1: E-commerce Platform" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Platform design</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                A complete design and rebuild of an academic project just like voting system,profile website and doctors appointment.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs font-medium bg-secondary-gray text-primary-blue px-3 py-1 rounded-full">React</span>
+                                <span class="text-xs font-medium bg-secondary-gray text-primary-blue px-3 py-1 rounded-full">Node.js</span>
+                                <span class="text-xs font-medium bg-secondary-gray text-primary-blue px-3 py-1 rounded-full">MongoDB</span>
+                            </div>
+                            <a href="#" target="_blank" class="text-primary-blue font-semibold hover:text-blue-700 text-sm transition duration-300">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-primary-blue/30 transition duration-300 border border-gray-100">
+                        <img src="https://placehold.co/600x400/F59E0B/ffffff?text=Data+Visualization+Tool" alt="Project 2: Data Visualization Tool" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2"></h3>Dashboard</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Developed a single-page application for a dashboard
+                            </p>
+                            
+                            <a href="#" target="_blank" class="text-primary-blue font-semibold hover:text-blue-700 text-sm transition duration-300">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-white rounded-xl shadow-2xl overflow-hidden hover:shadow-primary-blue/30 transition duration-300 border border-gray-100">
+                        <img src="https://placehold.co/600x400/EF4444/ffffff?text=Mobile+App+Concept" alt="Project 3: Mobile App Concept" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Platform Mobile App</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                            creating a mockups and design assests for academic
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs font-medium bg-secondary-gray text-primary-blue px-3 py-1 rounded-full">figma</span>
+                                <span class="text-xs font-medium bg-secondary-gray text-primary-blue px-3 py-1 rounded-full">canva</span>
+                                <span class="text-xs font-medium bg-secondary-gray text-primary-blue px-3 py-1 rounded-full">word</span>
+                            </div>
+                            <a href="#" target="_blank" class="text-primary-blue font-semibold hover:text-blue-700 text-sm transition duration-300">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-dark-bg text-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+                <h2 class="section-header text-3xl font-bold mb-10 text-white after:bg-white">Contact</h2>
+                <p class="text-lg mb-8 text-gray-300 text-center">
+                    I'm currently open to new full-time opportunities and comments. Send me a message, and let's start a conversation!
+                </p>
+
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-blue focus:ring focus:ring-primary-blue/50 text-white placeholder-gray-400 transition duration-300">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-blue focus:ring focus:ring-primary-blue/50 text-white placeholder-gray-400 transition duration-300">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                                  class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:border-primary-blue focus:ring focus:ring-primary-blue/50 text-white placeholder-gray-400 transition duration-300"></textarea>
+                    </div>
+                    <button type="submit" class="w-full px-6 py-3 bg-primary-blue text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-xl transform hover:scale-[1.01]">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-center text-sm">
+            <p>&copy; 2025 Cesar, Christian. </p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" target="_blank" class="hover:text-primary-blue transition duration-300">LinkedIn</a>
+                <a href="#" target="_blank" class="hover:text-primary-blue transition duration-300">GitHub</a>
+                <a href="mailto:jane.doe@example.com" class="hover:text-primary-blue transition duration-300">Email/gmail</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
